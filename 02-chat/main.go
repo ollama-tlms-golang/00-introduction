@@ -24,8 +24,6 @@ func main() {
 		ollamaRawUrl = "http://localhost:11434"
 	}
 
-	fmt.Println("🚀 Ollama API URL:", ollamaRawUrl)
-
 	url, _ := url.Parse(ollamaRawUrl)
 
 	client := api.NewClient(url, http.DefaultClient)

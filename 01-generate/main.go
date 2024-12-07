@@ -24,16 +24,13 @@ func main() {
 		ollamaRawUrl = "http://localhost:11434"
 	}
 
-	fmt.Println("🚀 Ollama API URL:", ollamaRawUrl)
-
 	url, _ := url.Parse(ollamaRawUrl)
-
 
 	client := api.NewClient(url, http.DefaultClient)
 
 	req := &api.GenerateRequest{
 		Model:  "qwen2.5:0.5b",
-		Prompt: "What is the best pizza in the world?",
+		Prompt: "The best pizza in the world is",
 		Options: map[string]interface{}{
 			"temperature":   0.8,
 			"repeat_last_n": 2,
